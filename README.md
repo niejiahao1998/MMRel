@@ -2,7 +2,7 @@
 
 The official repo of "MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era".
 
-More detailed information is in the [PAPER]().
+More detailed information is in the [PAPER](https://arxiv.org/pdf/2406.09121).
 
  Authors: [Jiahao Nie<sup>*</sup>](https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Gongjie Zhang<sup>*</sup>](https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Wenbin An](https://scholar.google.com/citations?user=BpkQZGgAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Yap-Peng Tan](https://scholar.google.com/citations?user=t9EqYQIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)</a>, [Alex C. Kot](https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)
 
@@ -44,6 +44,17 @@ The evaluation question-answers can be downloaded from [HERE](https://drive.goog
 ## MMRel for fine-tuning
 We attempt to utilize MMRel for fine-tuning, which consistently improve the MLLM's capabilities. More details can be found in paper. The data for fine-tuning can be downloaded from [HERE](https://drive.google.com/drive/folders/1MQNeoOqKXloQHHEEVOFdBPd-xyvRuDR6?usp=share_link).
 
+
+## Citation
+If you use this codebase for your research, please consider citing:
+```bash
+    @article{nie2024mmrel,
+    title={MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era},
+    author={Nie, Jiahao and Zhang, Gongjie and An, Wenbin and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},
+    journal={arXiv preprint arXiv:2406.09121},
+    year={2024}
+}
+ ```
 
 ## Acknowledgement
 Our experiments are conducted based on [LLaVA-1.5](https://github.com/haotian-liu/LLaVA) and [VCD](https://github.com/DAMO-NLP-SG/VCD)'s official code.
