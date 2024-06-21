@@ -48,11 +48,11 @@ We attempt to utilize MMRel for fine-tuning, which consistently improve the MLLM
 ## Citation
 If you use this codebase for your research, please consider citing:
 ```bash
-    @article{nie2024mmrel,
-    title={MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era},
-    author={Nie, Jiahao and Zhang, Gongjie and An, Wenbin and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},
-    journal={arXiv preprint arXiv:2406.09121},
-    year={2024}
+@article{nie2024mmrel,
+  title={MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era},
+  author={Nie, Jiahao and Zhang, Gongjie and An, Wenbin and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},
+  journal={arXiv preprint arXiv:2406.09121},
+  year={2024}
 }
  ```
 
