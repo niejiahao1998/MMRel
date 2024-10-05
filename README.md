@@ -4,6 +4,8 @@ The official repo of "MMRel: A Relation Understanding Dataset and Benchmark in t
 
 More detailed information is in the [PAPER](https://arxiv.org/pdf/2406.09121).
 
+Download the MMRel [Question-Answer pairs](https://drive.google.com/drive/folders/1MQNeoOqKXloQHHEEVOFdBPd-xyvRuDR6), and generated [Dall-E images](https://drive.google.com/drive/folders/1h4Kwo6Mi1HHe-XDrqlIhmVCQH-AO7iHC).
+
  Authors: [Jiahao Nie<sup>*</sup>](https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Gongjie Zhang<sup>*</sup>](https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Wenbin An](https://scholar.google.com/citations?user=BpkQZGgAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Yap-Peng Tan](https://scholar.google.com/citations?user=t9EqYQIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)</a>, [Alex C. Kot](https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)
 
 ## Multi-Modal Relation Understanding (MMRel)
