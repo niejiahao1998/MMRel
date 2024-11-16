@@ -1,359 +1,257 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Jiahao Nie</title>
-  
-  <meta name="author" content="Jiahao Nie">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="image/favicon_ntu.ico">
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V3D20SW4N4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V3D20SW4N4');
+</script>
+	
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<title>MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era</title>
+  <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta property="og:site_name" content="MMRel" />
+  <meta property="og:title" content="MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era" />
+  <meta property="og:description" content="MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era" />
+  <script type="module" src="https://unpkg.com/@google/model-viewer@2.0.1/dist/model-viewer.min.js"></script>
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/codemirror.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/codemirror.min.js"></script>
+  <script src="assets/js/clipboard.min.js"></script>
+  <script src="assets/js/video_comparison.js"></script>
+  <script src="assets/js/app.js"></script>
+
 </head>
 
-  <body>
-  <table width="950" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-    <td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="70%" valign="middle">
-        <p align="center">
-          <name>Jiahao Nie &nbsp;&nbsp;&nbsp; 聂 嘉豪 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		  </name>
+<body>
+  <div class="highlight-clean" style="padding-bottom: 10px;">
+  <div class="container" style="max-width: 950px;">
+    <div class="column has-text-centered">
+        <h1 class="col-md-12 text-center" id="title">
+          <img src="./image/logo.png" height="200px">
+        </h1>
+    </div>
+  </div>
+	<div class="container" style="max-width: 950px;">
+    <div class="row" id="title-row" style="max-width: 100%; margin: 0 auto; display: inline-block">
+        <h1 class="col-md-12 text-center" id="title">
+          <b>MMRel</b>: A Relation Understanding Benchmark in the MLLM Era <br>
+            <small>
+                arXiv 2024
+            </small>
+        </h1>
+    </div>
+	</div>
+	<div class="container" style="max-width: 950px;">
+		<div class="row" id="author-row" style="margin:0 auto;">
+      <div class="col-md-12 text-center" style="display: table; margin:0 auto">
+          <table class="author-table" id="author-table">
+              <tr>
+                  <td>
+                      <a style="text-decoration:none" href="https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">
+                        <b>Jiahao Nie *</b>
+                      </a>
+                      <br>Nanyang Technological University, Singapore
+                  </td>
+                  <td>
+                      <a style="text-decoration:none" href="https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">
+                        <b>Gongjie Zhang *</b>
+                      </a>
+                      <br>Alibaba DAMO Academy, Singapore
+                  </td>
+                  <td>
+                      <a style="text-decoration:none" href="https://scholar.google.com/citations?user=BpkQZGgAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">
+                        <b>Wenbin An</b>
+                      </a>
+                      <br>Xi'an Jiaotong University, China
+                  </td>
+              </tr>
+              <tr>
+                <td>
+                    <a style="text-decoration:none" href="https://scholar.google.com/citations?user=t9EqYQIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">
+                      <b>Yap-Peng Tan</b>
+                    </a>
+                    <br>Nanyang Technological University, Singapore
+                </td>
+                <td>
+                    <a style="text-decoration:none" href="https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">
+                      <b>Alex C. Kot</b>
+                    </a>
+                    <br>Nanyang Technological University, Singapore
+                </td>
+                <td>
+                  <a style="text-decoration:none" href="https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">
+                    <b>Shijian Lu</b>
+                  </a>
+                  <br>Nanyang Technological University, Singapore
+                </td>
+            </tr>
+          </table>
+      </div>
+  </div>   
+	</div>
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3 text-center">
+        <ul class="nav nav-pills nav-justified">
+            <li>
+                <a href="https://arxiv.org/pdf/2406.09121">
+                <img src="./image/arXiv.png" height="50px">
+                    <h4><strong>Paper</strong></h4>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/niejiahao1998/MMRel" target="_blank">
+                <img src="./image/github.png" height="50px">
+                    <h4><strong>Benchmark</strong></h4>
+                </a>
+            </li>
+        </ul>
+    </div>
+  </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <image src="./image/mmrel_sample.png" class="img-responsive" alt="overview" width="60%" style="width: 850px;margin:auto;">
+    </div>
+  </div>
+    <hr class="divider" />
+    <div class="container" style="max-width: 950px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><b>Abstract</b></h2>
+                <p class="text-justify">
+                  Though Multi-modal Large Language Models (MLLMs) have recently achieved significant progress, they often face various problems while handling inter-object relations, \ie, the interaction or association among distinct objects. This constraint largely stems from insufficient training and evaluation data for relation understanding, which has greatly impeded MLLMs in various vision-language generation and reasoning tasks. We attempt to address this challenge by introducing <b>M</b>ulti-<b>M</b>odal <b>Rel</b>ation Understanding (<b>MMRel</b>), a benchmark that features large-scale, high-quality, and diverse data on inter-object relations. MMRel features three distinctive attributes: <i>(i)</i> It contains over <i>22K</i> question-answer pairs, spanning three distinct domains and covering three relation categories, ensuring both scale and diversity; <i>(ii)</i> it provides manually verified, high-quality labels to ensure exceptional annotation accuracy; <i>(iii)</i> it includes adversarial cases with highly unusual relations, offering a challenging setting for evaluating relation hallucination. These features make MMRel ideal for evaluating MLLMs on relation understanding, as well as for fine-tuning MLLMs to enhance relation comprehension capability. Extensive experiments verify the effectiveness of MMRel in evaluating and enhancing MLLMs' relation understanding capabilities.
         </p>
+        </div>
+        </div>
+    </div>
 
-		<p style="line-height: 1.6em;">
-      I am a Ph.D. candidate at <a href="https://www.ntu.edu.sg">Nanyang Technological University</a>, under the supervision of  <a href="https://personal.ntu.edu.sg/shijian.lu">Prof. Shijian Lu</a> and <a href="https://personal.ntu.edu.sg/eyptan">Prof. Yap-Peng Tan</a>.
-      I also work closely with <a href="https://personal.ntu.edu.sg/eackot">Prof. Alex C. Kot</a>.
-      Before that, I obtained my M.S. in Signal Processing from <a href="https://www.ntu.edu.sg/"> Nanyang Technological University</a>, supervised by <a href="https://personal.ntu.edu.sg/eyptan">Prof. Yap-Peng Tan</a>, 
-      and my B.ENG. in Information Engineering from <a href="https://www.nwpu.edu.cn/">Northwestern Polytechnical University</a>, supervised by <a href="http://www.jie-chen.com/">Prof. Jie Chen</a>.
-    </p>  
-    My research interest are in Computer Vision and Artificial Intelligence.
-
-
-        <p align=center>
-          <a href="mailto:jiahao007@e.ntu.edu.sg">Email</a> &nbsp/&nbsp
-          <a href="https://github.com/niejiahao1998">Github</a> &nbsp/&nbsp
-          <a href="https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Google Scholar</a>       
-
-        </p>
-      </td>
-      <td width="30%">
-      <img src="image/jiahaonie.jpg" width="200">
-      </td>
-
-      </tr>
-      </table>
-
-
-<p></p><p></p><p></p><p></p><p></p>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="100%" valign="middle">
-          <heading>News</heading>
-          <p>
-      <li><strongsmall>[Mar. 2024]</strongsmall> &nbsp;&nbsp;<smalll>1 paper is accepted by ICME 2024 (Oral).</smalll><br/>
-		  <li><strongsmall>[Feb. 2024]</strongsmall> &nbsp;&nbsp;<smalll>1 paper is accepted by CVPR 2024.</smalll><br/>
-      <li><strongsmall>[Sep. 2023]</strongsmall> &nbsp;&nbsp;<smalll>1 paper is accepted by NeurIPS 2023.</smalll><br/> 
-      <li><strongsmall>[Oct. 2021]</strongsmall> &nbsp;&nbsp;<smalll>1 paper is accepted by IEEE ICICSP 2021.</smalll><br/>
-          </p>
-        </td>
-      </tr>
-</table>
-
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="100%" valign="middle">
-          <heading>Education</heading>
-        </td>
-      </tr>
-      </table>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
-        <tr>
-          <td width="5%">
-            <img src='image/ntu_icon.jpg' width="100">
-          </td>
-
-          <td width="75%" valign="middle">
-          <p style="line-height: 1.6em;">
-          <stronghuge> Jan. 2023 - Present <br />
-          Nanyang Technological University, &nbsp; Singapore</stronghuge><br />
-          Ph.D. in Computer Sciense <br />
-          GPA: 4.5/5.0 <br />
-          </p>
-        </td>
-      </tr>
-
-        <tr>
-          <td width="5%">
-            <img src='image/ntu_icon.jpg' width="100">
-          </td>
-
-          <td width="75%" valign="middle">
-          <p style="line-height: 1.6em;">
-          <stronghuge> Aug. 2021 - Aug. 2022 <br />
-          Nanyang Technological University, &nbsp; Singapore</stronghuge><br />
-          M.S. in Signal Processing <br />
-          GPA: 4.63/5.0 <br />
-          </p>
-        </td>
-      </tr>
-
-        <tr>
-          <td width="5%">
-            <img src='image/nwpu_icon.jpg' width="100">
-          </td>
-
-          <td width="75%" valign="middle">
-          <p style="line-height: 1.6em;">
-          <stronghuge> Sep. 2016 - Jun. 2020<br />
-          Northwestern Polytechnical University, &nbsp; China</stronghuge><br />
-          B.ENG. in Information Engineering &nbsp; <strong>Outstanding Graduate</strong><br />
-          GPA: 88/100 &nbsp; Ranking: Top 10%<br />
-          </p>
-        </td>
-      </tr>    
-	  
-      </table>
-
-
-
-      <p></p><p></p><p></p><p></p><p></p>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="100%" valign="middle">
-          <heading>Preprint & Publication <!--<a href="https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=en&oi=ao" style="font-size:22px;">[Google Scholar]</a></heading>-->
-        </td>
-      </tr>
-      </table>
-
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
-          <td width="15%">
-            <img src='paper/arXiv2024_MMRel.png'  width="200">
-          </td>
-          <td valign="middle" width="75%">
-          <p  style="line-height: 1.5em;">
-            <strong>MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era</strong><br>
-            <strong>Jiahao Nie<sup>*</sup></strong>, <a href="https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Gongjie Zhang<sup>*</sup></strong></a>, <a href="https://scholar.google.com/citations?user=BpkQZGgAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Wenbin An</a>,
-            <a href="https://scholar.google.com/citations?user=t9EqYQIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Yap-Peng Tan</a>, <a href="https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Alex C. Kot</a>, <a href="https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Shijian Lu</a><br>
-            <em>arXiv	preprint arXiv:2406.09121, <strong>2024</strong>
-            <a href="https://arxiv.org/pdf/2406.09121"><strong>[Paper]&nbsp</strong></a><a href="https://github.com/niejiahao1998/MMRel"><strong>[Dataset]</strong></a><br>
-            </p>
-          </td>
-        </tr>
-       </table>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
-          <td width="15%">
-            <img src='paper/CVPR2024_IFA.png'  width="200">
-          </td>
-          <td valign="middle" width="75%">
-          <p  style="line-height: 1.5em;">
-            <strong>Cross-Domain Few-Shot Segmentation via Iterative Support-Query Correspondence Mining</strong><br>
-            <strong>Jiahao Nie<sup>*</sup></strong>, <a href="https://scholar.google.com/citations?user=uOAYTXoAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Yun Xing<sup>*</sup></a>, <a href="https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Gongjie Zhang</a>,
-            <a href="https://scholar.google.com/citations?user=XnvspFEAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Pei Yan</a>, <a href="https://scholar.google.com/citations?user=yGKsEpAAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Aoran Xiao</a>,
-            <a href="https://scholar.google.com/citations?user=t9EqYQIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Yap-Peng Tan</a>, <a href="https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Alex C. Kot</a>, <a href="https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Shijian Lu</a><br>
-            <em>IEEE/CVF Conference on Computer Vision and Pattern Recognition, <strong>CVPR 2024</strong>
-            <a href="https://arxiv.org/pdf/2401.08407.pdf"><strong>[Paper]&nbsp</strong></a><a href="https://github.com/niejiahao1998/IFA"><strong>[Code]</strong></a><br>
-            </p>
-          </td>
-        </tr>
-       </table>
-
-      
-      
-       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
-          <td width="15%">
-            <img src='paper/ICME2024_CSL.png'  width="200">
-          </td>
-          <td valign="middle" width="75%">
-          <p  style="line-height: 1.5em;">
-            <strong>Cross-Domain Few-Shot Segmentation via Iterative Support-Query Correspondence Mining</strong><br>
-            <strong>Jiahao Nie</strong>, <a href="https://scholar.google.com/citations?user=3MQDywkAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Shan Lin</a>, <a href="https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Alex C. Kot</a><br>
-            <em>IEEE International Conference on Multimedia and Expo, <strong>ICME 2024 (Oral)</strong>
-            <a href="https://arxiv.org/pdf/2405.09487"><strong>[Paper]&nbsp</strong></a><a href="https://github.com/niejiahao1998/CSL"><strong>[Code]</strong></a><br>
-            </p>
-          </td>
-        </tr>
-       </table>
-      
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
-          <td width="15%">
-            <img src='paper/NIPS2023_CoCu.png'  width="200">
-          </td>
-          <td valign="middle" width="75%">
-          <p  style="line-height: 1.5em;">
-            <strong>Rewrite Caption Semantics: Bridging Semantic Gaps for Language-Supervised Semantic Segmentation</strong><br>
-            <a href="https://scholar.google.com/citations?user=uOAYTXoAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Yun Xing</a>, <a href="https://scholar.google.com/citations?user=19CysIEAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Jian Kang</a>, <a href="https://scholar.google.com/citations?user=yGKsEpAAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Aoran Xiao</a>, <strong>Jiahao Nie</strong>,
-            <a href="https://scholar.google.com/citations?user=z84rLjoAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Ling Shao</a>, <a href="https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao">Shijian Lu</a><br>
-            <em>Advances in Neural Information Processing Systems, <strong>NeurIPS 2023</strong>
-            <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/d937cb3fe2851ed0ab9af5e38f885077-Paper-Conference.pdf"><strong>[Paper]&nbsp</strong></a><a href="https://github.com/xing0047/rewrite"><strong>[Code]</strong></a><br>
-            </p>
-          </td>
-        </tr>
-       </table>
     
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr onmouseout="aperture_stop()" onmouseover="aperture_start()" >
-        <td width="15%">
-          <img src='paper/ICICSP2021_3DConv.jpg'  width="200">
-        </td>
-        <td valign="middle" width="75%">
-        <p  style="line-height: 1.5em;">
-          <strong>A Novel 3D Convolutional Neural Network for Action Recognition in Infrared Videos</strong><br>
-          <strong>Jiahao Nie</strong>, Longbin Yan, <a href="https://scholar.google.com/citations?user=xyfMMGIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=sra">Xiuheng Wang</a>, <a href="https://scholar.google.com/citations?user=H39s-iIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=sra">Jie Chen</a><br>
-          <em>IEEE International Conference on Information Communication and Signal Processing, <strong>ICICSP 2021</strong>
-          <a href="https://ieeexplore.ieee.org/abstract/document/9611896/"><strong>[Paper]</strong></a><br>
-          </p>
-        </td>
-      </tr>
-    </table>
+    <hr class="divider" />
+    <div class="container" style="max-width: 950px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><b>Existing Benchmark</b></h2>
+                <image src="image/existing_benchmark1.png" class="img-responsive" alt="overview" width="60%" style="width: 800px;margin:auto;"></image>
+                <image src="image/existing_benchmark2.png" class="img-responsive" alt="overview" width="60%" style="width: 830px;margin:auto;"></image>
+                <p class="text-justify">
+                  Though several benchmarks on inter-object relations have been created, they were not intended for assessing MLLMs' relation understanding capabilities. Specifically, most existing benchmarks suffer from obvious limitations in data scales, relation categories, and data diversity. We address this issue by creating a comprehensive benchmark on inter-object relations, aiming to gauge and enhance MLLMs' relation understanding capability in various multimodal tasks.
+                </p>
+            </div>
+        </div>
+    </div>
 
 
+    <hr class="divider" />
+    <div class="container" style="max-width: 950px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><b>MMRel</b></h2>
+                <image src="image/semidc.png" class="img-responsive" alt="overview" width="60%" style="width: 800px;margin:auto;"></image>
+                <p class="text-justify">
+                  We introduce a Semi-automatic Data Collection pipeline (SemiDC), which is capable of annotating large-scale existing images and generating a substantial amount of high-quality synthetic images. As discussed in paper, re-labeling existing images is essential since their original labels are incompatible with MLLMs. To this end, we design SemiDC to generate high-quality relation annotations via GPT-4V for large-scale VG benchmark. This process is divided into three stages: <i>(i)</i> Pre-processing: We selectively exclude images featuring complex scenes that pose challenges for GPT-4V in generating accurate annotations; <i>(ii)</i> Re-labeling via GPT-4V: We employ the in-context learning paradigm to use GPT-4V to generate relation annotations. GPe text prompt; <i>(iii)</i> Human verification: We manually assess and correct the annotations that are generated by GPT-4V, to ensure the quality of the collected inter-object relation data.
+                </p>
+                <image src="image/statistics.png" class="img-responsive" alt="overview" width="60%" style="width: 830px;margin:auto;"></image>
+                <p class="text-justify">
+                  Table shows the statistics of MMRel. Specifically, MMRel comprises around 22,500 question-answer pairs (15K Yes/No, and 7.5K Open-ended) across 7 subsets, spanning 3 domains and 3 categories of relations. Thanks to the open-vocabulary capability of GPT-4V, MMRel guarantees a diverse range of objects and action relations.
+                </p>
+            </div>
+        </div>
+    </div>
 
 
+    <hr class="divider" />
+    <div class="container" style="max-width: 950px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><b>Evaluation on MMRel</b></h2>
+                <image src="image/evaluation.png" class="img-responsive" alt="overview" width="65%" style="width: 750px;margin:auto;"></image>
+                <p class="text-justify">
+                  We employ all of the 15K <i>Yes/No</i> question-answer pairs in MMRel to evaluate how MLLMs perform while handling multimodal data with rich inter-object relations. As Table shows, all nine MLLMs face various problems while handling relation understanding.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <hr class="divider" />
+    <div class="container" style="max-width: 950px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><b>Fine-Tuning with MMRel</b></h2>
+                <image src="image/fine-tuning.png" class="img-responsive" alt="overview" width="60%" style="width: 450px;margin:auto;"></image>
+                <p class="text-justify">
+                  As Table shows, fine-tuning with MMRel improves the capabilities of relation understanding significantly and consistently across all data domains and relation categories. In addition, fine-tuning improves the relation understanding of the adversarial subset as well.
+                </p>
+            </div>
+        </div>
+    </div>
+          
 
-
-<p></p><p></p><p></p><p></p><p></p>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="100%" valign="middle">
-          <heading>Research Experience</heading>
-        </td>
-      </tr>
-      </table>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr>
-          <td width="10%">
-            <img src='image/rose_icon.jpg' width="100">
-          </a>
-          </td>
-
-          <td width="80%" valign="middle">
-          <p  style="line-height: 1.3em;">
-          <stronghuge>Sep. 2021 - Dec. 2022<br />
-          Rapid-Rich Object Search Lab, &nbsp; NTU</stronghuge><br />
-          <huge><em>M.S. Dissertation Project & Research Associate</em></huge><br />
-          Advisors: &nbsp; <a href="https://personal.ntu.edu.sg/eyptan/index.html">Prof. Yap-Peng Tan</a>,
-          <a href="https://personal.ntu.edu.sg/eackot/index.html">Prof. Alex C. Kot</a>
-          and <a href="https://linshanify.github.io/">Dr. Shan Lin</a>
-          </p>
-        </td>
-      </tr>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr>
-          <td width="10%">
-            <img src='image/ciaic_icon.jpg' width="100">
-            </a>
-          </td>
-
-          <td width="80%" valign="middle">
-          <p  style="line-height: 1.3em;">
-          <stronghuge>Aug. 2020 - Jul. 2021<br />
-          Center of Intelligent Acoustics and Immersive Communications, &nbsp; NWPU</stronghuge><br />
-          <huge><em>Research  Assistant</em></huge><br />
-          Advisor: <a href="http://www.jie-chen.com">Prof. Jie Chen</a>
-        </td>
-      </tr>
-
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <tr>
-          <td width="10%">
-            <img src='image/tsinghua_icon.jpg' width="100">
-            </a>
-          </td>
-
-          <td width="80%" valign="middle">
-          <p  style="line-height: 1.3em;">
-          <stronghuge>Jul. 2019 - Aug. 2019<br />
-          Navigation Technology Engineering Center Laboratory, &nbsp; THU</stronghuge><br />
-          <huge><em>Summer Intern</em></huge><br />
-          Advisor: <a href="http://faculty.dpi.tsinghua.edu.cn/weiqi.html">Prof. Qi Wei</a>
-          </p>
-        </td>
-      </tr>
-
-      
+        
       
 
+      </div>
 
-    <p></p><p></p><p></p><p></p><p></p>
-    <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr>
-            <td width="100%" valign="middle">
-              <heading>Miscellaneous</heading>
-              <div style="line-height:25px">
-              <p>
-                <li> <stronghuge><strong>Reviewer:</strong></stronghuge><br/>
-                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp TMM, ICME 2024<br/>
-                <li> <stronghuge><strong>Teaching:</strong></stronghuge><br/>
-                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp SC2079/CE3004/CZ3004 Multi-Disciplinary Design Project, NTU, 2023 Fall, 2024 Spring<br/>
-                <li> <stronghuge><strong>Activity:</strong></stronghuge><br/>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Vice Chairman of Student Union, School of Marine Science and Technology, NWPU&nbsp; 2017 - 2019<br/>
-              </div>
-            </td>
-          </tr>
-    </table>
+    <hr class="divider" />
+  
+    <div class="container" style="max-width: 950px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2><b>Citation</b></h2>
+                Consider citing us if you find this project is helpful. <br>
+                <code>
+                    @article{nie2024mmrel,<br>
+                    &nbsp; title={MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era},<br>
+                    &nbsp; author={Nie, Jiahao and Zhang, Gongjie and An, Wenbin and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},<br>
+                    &nbsp; journal={arXiv preprint arXiv:2406.09121},<br>
+                    &nbsp; year={2024}<br>
+                  }</code></div>
+        </div>
+    </div>
 
-
-
-<p></p><p></p><p></p><p></p><p></p>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-      <tr>
-        <td width="100%" valign="middle">
-          <heading>Honor & Award</heading>
-          <div style="line-height:25px">
-          <p>
-      <li> <stronghuge>NTU IGP Research Scholoarship</stronghuge> &nbsp; 2023 - 2027<br/>
-      <li> <stronghuge>NWPU Outstanding Graduate of the University (Top 6% student)</stronghuge> &nbsp; 2020<br/>
-      <li> <stronghuge>NWPU Outstanding Graduate of the School (Top 15% student)</stronghuge> &nbsp; 2020<br/>
-		  <li> <stronghuge>NWPU School-level Outstanding Student Award (three times & Top 15% student)</stronghuge> &nbsp; 2017 - 2019<br/>
-      <li> <stronghuge>NWPU Special Scholarships (four times & Top 8% student)</stronghuge> &nbsp; 2017 - 2019<br/>
-      <li> <stronghuge>Four national awards, including China Marine Vehicle Design and Manufacture Contest Outstanding Winner</stronghuge>&nbsp; 2017 - 2019<br/>
-          </p>
+    <hr class="divider" />
+    <div class="container" style="max-width: 950px;">
+      <div class="row">
+          <div class="col-md-12">
+              <h2>Acknowledgements</h2>
+              <p>This webpage integrates components from many websites, including <a href="https://dorverbin.github.io/refnerf/">RefNeRF</a>, <a href="https://kunhao-liu.github.io/StyleRF/">StyleRF</a>, and <a href="https://richzhang.github.io/webpage-template/">Richard Zhang's template</a>.
+                We sincerely thank the authors for their great work and websites.</p>
+                <br></p>
+            </div>
           </div>
-        </td>
-      </tr>
-</table>
+    </div>
 
-
-
-<p></p><p></p><p></p><p></p><p></p>
-<table style="width:25%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-  <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=39eL-bl4e0ZAO8NNLk9SQyDWKruWYpMqz_pcs1QUmjA&cl=ffffff&w=a"></script>
-</tbody>
-</table>
-
-<p></p><p></p><p></p><p></p><p></p>
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-  <tbody>
-
-      <tr>
-          <td style="padding:0px">
-              <p style="text-align:left;font-size:small;"> This homepage was last updated: <span id="demo"></span>.</p>
-              <script>document.getElementById("demo").innerHTML = document.lastModified;</script>
-          </td>
-          <td>
-              <p style="text-align:right;font-size:small;">
-                  This awesome website template is borrowed from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.
-              </p>
-          </td>
-      </tr>
-  </tbody>
-</table>
-   
-
+    <script src="https://polyfill.io/v3/polyfill.js?features=IntersectionObserver"></script>
+    <script src="/assets/js/yall.js"></script>
+    <script>
+        yall(
+            {
+                observeChanges: true
+            }
+        );
+    </script>
+    <script src="/assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://uploads-ssl.webflow.com/51e0d73d83d06baa7a00000f/js/webflow.fd002feec.js"></script>
+    <!-- Import the component -->
 </body>
+
 </html>
