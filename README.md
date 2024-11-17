@@ -5,7 +5,7 @@
 # MMRel: A Relation Understanding Benchmark in the MLLM Era
 [![arXiv](https://img.shields.io/badge/Arxiv-2406.09121-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2406.09121)<a href="https://huggingface.co/papers/2410.15926"></a> <a href='https://huggingface.co/datasets/jiahaonie/MMRel'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-fbe851'></a> <a href='https://niejiahao1998.github.io/MMRel/'><img src='https://img.shields.io/badge/😊%20MMRel-Homepage-89cff0'></a>
 
-The official repo of "MMRel: A Relation Understanding Benchmark in the MLLM Era". MMRel is a <u>**large-scale, high-quality, and diverse multi-modal**</u> benchmark for studying inter-object relations with MLLM.
+The official repo of "MMRel: A Relation Understanding Benchmark in the MLLM Era". MMRel is a <ins>**large-scale, high-quality, and diverse multi-modal**</ins> benchmark for studying inter-object relations with MLLM.
 
 A brief introduction is in the [HOMEPAGE](https://niejiahao1998.github.io/MMRel/), and more detailed information is in the [PAPER](https://arxiv.org/pdf/2406.09121).
 
