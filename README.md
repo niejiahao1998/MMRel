@@ -1,57 +1,45 @@
-# MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era
+<div align="center">
+  <img src="image/logo.png" alt="Your Image" width="200px" style="float: center; margin-right: 1px;"/>
+</div>
 
-The official repo of "MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era".
+# MMRel: A Relation Understanding Benchmark in the MLLM Era
+[![arXiv](https://img.shields.io/badge/Arxiv-2406.09121-b31b1b.svg?logo=arXiv)](https://arxiv.org/pdf/2406.09121)<a href="https://huggingface.co/papers/2410.15926"></a> <a href='https://huggingface.co/datasets/jiahaonie/MMRel'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-fbe851'></a> <a href='https://niejiahao1998.github.io/MMRel/'><img src='https://img.shields.io/badge/😊%20MMRel-Homepage-89cff0'></a>
 
-More detailed information is in the [PAPER](https://arxiv.org/pdf/2406.09121).
+The official repo of "MMRel: A Relation Understanding Benchmark in the MLLM Era". MMRel is a <u>**large-scale, high-quality, and diverse multi-modal**</u> benchmark for studying inter-object relations with MLLM.
 
-Download the MMRel [Question-Answer pairs](https://drive.google.com/drive/folders/1MQNeoOqKXloQHHEEVOFdBPd-xyvRuDR6), and generated [Dall-E images](https://drive.google.com/drive/folders/1h4Kwo6Mi1HHe-XDrqlIhmVCQH-AO7iHC).
+A brief introduction is in the [HOMEPAGE](https://niejiahao1998.github.io/MMRel/), and more detailed information is in the [PAPER](https://arxiv.org/pdf/2406.09121).
+
+The MMRel download links are descrbed below.
 
  Authors: [Jiahao Nie<sup>*</sup>](https://scholar.google.com/citations?user=LGM10RQAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Gongjie Zhang<sup>*</sup>](https://scholar.google.com/citations?user=sRBTPp4AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Wenbin An](https://scholar.google.com/citations?user=BpkQZGgAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Yap-Peng Tan](https://scholar.google.com/citations?user=t9EqYQIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)</a>, [Alex C. Kot](https://scholar.google.com/citations?user=UGZXLxIAAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao), [Shijian Lu](https://scholar.google.com/citations?user=uYmK-A0AAAAJ&hl=zh-CN&inst=8669986779262753491&oi=ao)
 
-## Multi-Modal Relation Understanding (MMRel)
 <p align="middle">
     <img src="image/mmrel.png">
 </p>
 
-MMRel Dataset is a **large-scale, high-quality, and diverse multi-modal** benchmark for studying inter-object relations with MLLM.
 
-MMRel contains over 15K data that comprises multi-modal data of three categories of relations (*i.e.* spatial, action, and comparative) and are sourced from three distinct domains (*i.e.*, Real images, synthetic images from SDXL, and synthetic imagesb from Dall-E).
-<p align="middle">
-    <img src="image/statistics.png">
-</p>
+## Download
 
-## Semi-Automatic Data Collection (SemiDC)
-We adopt a semi-automatic pipeline that leverages MLLMs to generate images and annotations based on textual prompts and then verifies and corrects the generated images and annotations by human reviewers.
-<p align="middle">
-    <img src="image/semidc.png">
-</p>
-
-## Images
-#### Real images and images sythestized from SDXL
+### Real images and images sythestized from SDXL
 The real images are from [Visual Genome](https://homes.cs.washington.edu/~ranjay/visualgenome/index.html).
 The images sythestized from SDXL can be download from [SPEC](https://github.com/wjpoom/SPEC)'s official repo. Specifically, we adopt the *realtive_spatial* and *relative_size* subsets.
-#### Images synthesized from Dall-E
+
+### Images synthesized from Dall-E
 To diversity the MMRel, we specifally sythesize images via Dall-E. Moreover, we create a challenging subset in MMRel which utilizes relations that deviate from common sense to assess the relation understanding capabilities of MLLMs rigorously. The images from Dall-E are with different four styles (*i.e.*, photo-realistic, watercolor, abstract, and oil painting).
 
-The images generated from Dall-E can be download [HERE](https://drive.google.com/drive/folders/1h4Kwo6Mi1HHe-XDrqlIhmVCQH-AO7iHC?usp=share_link).
+### The images generated from Dall-E
+Our released Dall-E synthetic image can be download from [Hugging Face](https://huggingface.co/datasets/jiahaonie/MMRel).
 
-## MMRel for evalution
-Thanks to its large-scale, high-quality, and diverse multi-modal features, MMRel is ideal for evaluating MLLMs on relation understanding. We utilize all 15K data for evaluation, and the expeierments are conducted with [VCD](https://github.com/DAMO-NLP-SG/VCD)'s official code.
-<p align="middle">
-    <img src="image/eval.png">
-</p>
 
-The evaluation question-answers can be downloaded from [HERE](https://drive.google.com/drive/folders/1MQNeoOqKXloQHHEEVOFdBPd-xyvRuDR6?usp=share_link).
-
-## MMRel for fine-tuning
-We attempt to utilize MMRel for fine-tuning, which consistently improve the MLLM's capabilities. More details can be found in paper. The data for fine-tuning can be downloaded from [HERE](https://drive.google.com/drive/folders/1MQNeoOqKXloQHHEEVOFdBPd-xyvRuDR6?usp=share_link).
+### Question-Answer pairs for evaluation and fine-tuning
+Our released QA pairs can be download from [Hugging Face](https://huggingface.co/datasets/jiahaonie/MMRel).
 
 
 ## Citation
 If you use this codebase for your research, please consider citing:
 ```bash
 @article{nie2024mmrel,
-  title={MMRel: A Relation Understanding Dataset and Benchmark in the MLLM Era},
+  title={MMRel: A Relation Understanding Benchmark in the MLLM Era},
   author={Nie, Jiahao and Zhang, Gongjie and An, Wenbin and Tan, Yap-Peng and Kot, Alex C and Lu, Shijian},
   journal={arXiv preprint arXiv:2406.09121},
   year={2024}
